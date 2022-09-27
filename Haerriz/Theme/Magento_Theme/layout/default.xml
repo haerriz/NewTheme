@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="top.search" destination="catalog.topnav" />
+        <move element="minicart" destination="catalog.topnav" after="-" />
+        <move element="my-account-link" destination="catalog.topnav" after="logo"/>
+        <move element="logo" destination="catalog.topnav" before="-"/>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_width" xsi:type="number">177</argument>
+                <argument name="logo_height" xsi:type="number">20</argument>
+                <argument name="logo_alt" xsi:type="string">Logo name</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="header">
+            <arguments>
+                <argument name="show_part" xsi:type="string">other</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="register-link" remove="true" />
+        <referenceBlock name="authorization-link" remove="true" />
+        <referenceBlock name="wish-list-link" remove="true" />
+        <referenceBlock name="advanced-search-link" remove="true"/>
+        <referenceBlock name="footer" remove="true"/>
+        <referenceBlock name="header.container" remove="true"/>
+    </body>
+</page>
